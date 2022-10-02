@@ -1,0 +1,79 @@
+h1{
+  color: white;
+  font-family: Roboto;
+  font-size: 25px;
+  padding-right: 600px;
+}
+
+h2 {
+  color: white;
+  display: inline;
+  font-size: 15px;
+  font-family: Roboto;
+
+}
+p{
+  font-size: 13px;
+  color: #6E767D;
+  font-family: Roboto;
+  padding-bottom: 0px;
+  display: inline;
+}
+
+
+
+.wd-topics-table{
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-family: Roboto;
+
+}
+
+.wd-topics-table-header-row{
+  color: #00A1F2;
+  font-family: Roboto;
+
+}
+.wd-topics-table-header{
+  padding: 16px;
+  font-size: 15px;
+  font-family: Roboto;
+
+
+}
+.wd-post-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  float: right;
+  margin: 16px;
+
+}
+
+
+ .wd-header{
+   color: #6e767d;
+ }
+
+ .wd-gear-icon{
+   width: 20px;
+   height: 20px;
+   padding-left: 30px;
+   padding-top: 20px;
+ }
+
+ .wd-border {
+   border-bottom: 1px solid white;
+
+ }
+
+ .wd-search-twitter {
+   color: white;
+   background-color: #222222;
+   border-radius: 15px;
+   height: 20px;
+   width: 400px;
+    border-color: black;
+   border-style: solid;
+ }
+
