@@ -27,7 +27,7 @@ const ExploreComponent = () => {
       </li>
     </ul>
     <div class="wd-container">
-      <img class="wd-explore-large-image" src="spaceX.jpg" ><div class="bottom-left">SpaceX's Starship</div>
+      <img class="wd-explore-large-image" src="../../images/spaceX.jpg" ><div class="bottom-left">SpaceX's Starship</div>
     </div>
     
   
