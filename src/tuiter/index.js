@@ -1,9 +1,5 @@
-import Nav from "../nav";
 import NavigationSidebar from "./navigation-sidebar";
-import WhoToFollowListItem from "./who-to-follow-list/WhoToFollowListItem"
 import WhoToFollowList from "./who-to-follow-list/index"
-import PostSummaryItem from "./post-summary-list/post-summary-item";
-import PostSummaryList from "./post-summary-list";
 import ExploreComponent from "./explore";
 
 
