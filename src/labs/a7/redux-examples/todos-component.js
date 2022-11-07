@@ -1,3 +1,4 @@
+
 import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {addTodo, deleteTodo, todoDoneToggle}
@@ -44,7 +45,8 @@ const Todos = () => {
           </li>
           {
             todos.map((todo, index) =>
-                <li className="list-group-item">
+                <li key={todo._id} className="list-group-item">
+
                   <button onClick={() =>
                       deleteTodoClickHandler(index)}
                           className="btn btn-danger
@@ -65,3 +67,4 @@ const Todos = () => {
   );
 };
 export default Todos;
+
