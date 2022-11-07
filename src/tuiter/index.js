@@ -4,7 +4,6 @@ import ExploreComponent from "./explore";
 import whoReducer
   from "./reducers/who-reducer";
 import tuitsReducer from "./tuits/tuits-reducer";
-
 import { configureStore }
   from '@reduxjs/toolkit';
 import {Provider} from "react-redux";
