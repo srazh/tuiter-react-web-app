@@ -34,7 +34,7 @@ const TuitStats = (
 
           </div>
           <div className="col-sm">
-            <img src={share}/>
+            <img src={share} alt="share"/>
           </div>
         </div>
       </li>

@@ -2,7 +2,6 @@ import React from "react";
 import {useDispatch} from "react-redux";
 import TuitStats from "./tuit-stats";
 import tuit from '../tuits/tuits.json'
-import {useSelector} from "react-redux";
 import {deleteTuit} from "./tuits-reducer";
 
 
