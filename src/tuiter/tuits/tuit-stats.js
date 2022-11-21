@@ -1,40 +1,66 @@
 import React from "react";
-import reply from '../images/reply.png'
-import retweet from '../images/retweet.png'
-import heart from '../images/heart.png'
-import redHeart from '../images/redHeart.png'
+import {updateTuitThunk} from "../../services/tuits-thunks";
+import{useDispatch} from 'react-redux'
 
-import share from '../images/share.png'
-
-
-const TuitStats = (
+const TuitStats =    (
     {tuits}
 
-) => {
+)=> {const dispatch = useDispatch();
 
   return(
       <li className="list-group-item">
         <div className="row">
           <div className="col-sm">
-            <img src = {reply} alt="reply"/>
+            <i className="bi bi-chat"></i>
             <div  >{tuits.replies}</div>
           </div>
           <div className="col-sm">
-            <img  src={retweet} alt = "retweet"/>
+            <i className="bi bi-repeat"></i>
             <div>{tuits.retuits}</div>
           </div>
 
           <div className="col-sm">
-            <img  src={
-              tuits.likes ? redHeart : heart
-              } alt="heart"
-            />
-            <div>{tuits.likes}</div>
-
-
+              <i onClick={() => {
+                if (!tuits.liked) {
+                  dispatch(updateTuitThunk({
+                    ...tuits,
+                    liked: true,
+                    likes: tuits.likes + 1 }))}
+                else {
+                  dispatch(updateTuitThunk({
+                    ...tuits,
+                    liked: false,
+                    likes: tuits.likes - 1 }))
+                }}} className={`bi bi-heart${tuits.liked ? '-fill text-danger' : ''}`}/>
+              {' ' + tuits.likes}
           </div>
+
+
           <div className="col-sm">
-            <img src={share} alt="share"/>
+            <i onClick={() => {
+              if (!tuits.disliked) {
+                dispatch(updateTuitThunk({
+                  ...tuits,
+                  disliked: true,
+                  dislikes: tuits.dislikes + 1 }))}
+              else {
+                dispatch(updateTuitThunk({
+                  ...tuits,
+                  disliked: false,
+                  dislikes: tuits.dislikes - 1 }))
+              }}} className={`bi bi-hand-thumbs-down${tuits.disliked ? 'bi bi-hand-thumbs-down-fill' : ''}`}/>
+            {' ' + tuits.dislikes}
+          </div>
+
+
+          <div className="col-sm">
+            <i className="bi bi-reply"></i>
+            <div  >{tuits.replies}</div>
+          </div>
+
+
+          <div className="col-sm">
+            <i className="bi bi-share-fill"></i>
           </div>
         </div>
       </li>
